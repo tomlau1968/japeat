@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:100');
+@import url(<link href="https://fonts.googleapis.com/css?family=Kanit">);
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.indexShall {
+  background: url(../images/iStock-177426757.png);
+  height: 50%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size:100%;
+  display: table;
+  top:auto;
+  margin: auto;
+}
+
+.indexShall .indexInner{
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  max-width: none;
+  top: 10%;
+}
+
+.indexAnimated {
+  max-width: 600px;
+  margin: 30% auto;
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+.indexAnimated h1 {
+  font-family: 'Kanit', sans-serif;
+  font-size: 500%;
+  color: #E1EFE9;
+  line-height: 10%;
+  letter-spacing: 220%;
+}
+
+.indexAnimated h2 {
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 150%;
+  font-size: 100;
+  color: #E1EFE9;
+
+}
+
+.fishShall, .remenShall {
+  height: 40%;
+  width: 100%;
+  background-color: lightblue;
+  display: table;
+  z-index: -1;
+}
+
+.fishInner {
+  height: 80%;
+  display: table-cell;
+  background-position: right 10% bottom 50%;
+  background-image: url(../images/fish.png);
+  background-repeat: no-repeat;
+  background-size:45%;
+  display: table-cell;
+  vertical-align: middle;
+  max-width: none;
+  top: 7%;
+  z-index: -1;
+  margin: 30% auto;
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+.fishAnimated, .remenAnimated {
+  width: 40%;
+  height: 35%;
+  position: relative;
+  left:6%;
+  font-family: 'Yantramanav', sans-serif;
+  font-weight: 600;
+  color: black;
+  top: -20%;
+  font-size: 100%;
+}
+
+.fishAnimated h1 .remenAnimated h1 {
+  font-family: 'Kanit', sans-serif;
+  font-size: 200%;
+  color: black;;
+  line-height: 10%;
+  letter-spacing: 220%;
+}
+
+.sakeShall {
+  height: 100%;
+  width: 100%;
+  display: table;
+  position: relative;
+}
+
+.sakeInner {
+  display: table-cell;
+  background-position: left 10% bottom 25%;
+  background-image: url(../images/sake.png);
+  background-repeat: no-repeat;
+  background-size:70%;
+  vertical-align: middle;
+  z-index: -1;
+  text-align: center;
+}
+
+.sakeAnimated {
+  display: table-cell;
+  position: relative;
+  max-width: 400px;
+  left: 170%;
+}
+
+.sakeAnimated h1 {
+  font-family: 'Kanit', sans-serif;
+  font-size: 200%;
+  color: black;;
+  line-height: 10%;
+  letter-spacing: 220%;
+  margin-top: 0;
+}
+
+.sakeAnimated h2 {
+  font-family: 'Kanit', sans-serif;
+  font-size: 2000%;
+  color: red;
+  line-height: 10%;
+  letter-spacing: 220%;
+  margin: -10%;
+}
+
+.sakeAnimated p {
+  font-family: 'Yantramanav', sans-serif;
+  font-weight: 600;
+  color: black;
+  font-size: 100%;
+  padding-bottom: 50%;
+}
+
+.remenInner {
+  height: 80%;
+  background-position: right 1% bottom 50%;
+  background-image: url(../images/remen.png);
+  background-repeat: no-repeat;
+  background-size:45%;
+  display: table-cell;
+  vertical-align: middle;
+  max-width: none;
+  top: 7%;
+  z-index: -1;
+  margin: 30% auto;
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+.sushiShall {
+  height: 100%;
+  width: 100%;
+  display: table;
+  position: relative;
+  background-image: url(../images/leftSushi.png);
+  background-repeat: no-repeat;
+  background-size:47%;
+  z-index: -1;
+  background-position: left 10% bottom 60%;
+  /*background-color: black;*/
+}
+
+.sushiInner {
+  display: table-cell;
+  vertical-align: middle;
+  z-index: -1;
+  text-align: center;
+  background-size:49%;
+  display: table-cell;
+  background-image: url(../images/rightSushi.png);
+  background-repeat: no-repeat;
+  z-index: 2;
+  background-position: right 10% bottom 50%;
+}
+
+.sushiAnimated{
+  display: table-cell;
+  position: relative;
+  max-width: 400px;
+  left: 118%;
+  font-family: 'Yantramanav', sans-serif;
+  font-weight: 600;
+  color: black;
+  top: -20%;
+  font-size: 100%;
+  position: relative;
+}
+
+.sushiAnimated h1{
+  font-family: 'Kanit', sans-serif;
+  font-size: 200%;
+}
+
+
+
+/*--- Media Queries --*/
+@media screen and (max-width: 900px) {
+
+}
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 480px) {
+
+}

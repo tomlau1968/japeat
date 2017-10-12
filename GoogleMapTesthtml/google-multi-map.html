@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MY Multi Google Map</title>
+  <style>
+    #map{
+      height: 600px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Multi Google Map</h1>
+  <div id= "map"> </div>
+  <script>
+function initMap(){
+  //Map options
+let options = {
+  zoom: 10,
+  center: {lat:-33.865143, lng:151.209900}
+}
+
+// New map
+let map = new
+google.maps.Map(document.getElementById('map'), options);
+
+
+google.maps.event.addListener(map, "click",
+function(event){
+  addMarker({coords:event.latling});
+});
+
+
+/*
+//Add marker
+let marker = new google.maps.Marker({
+  position:{lat:-33.7961, lng:151.0011},
+  map: map,
+  // change to flag marker
+  icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+});
+
+// add extra maker
+let infoWindow = new google.maps.InfoWindow({
+  content:'<h1>North Parramatta</h1>'
+});
+
+marker.addListener('click', function(){
+  infoWindow.open(map, marker);
+});
+
+*/
+
+//array of markers
+let markers =[
+  {
+    coords:{lat:-33.7961, lng:151.0011},
+    iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+    content:'<h1>North Parramatta</h1>'
+  },
+  {
+    coords: {lat:-33.8772, lng:151.1049}, content:'<h1>Ashfield</h1>'
+  },
+  {
+    coords: {lat:-33.8889, lng:151.1249},
+  },
+  {
+    coords: {lat:-33.9209, lng:150.9231}
+  }
+];
+
+for(let i = 0; i < markers.length; i++){
+  addMarker(markers[i]);
+};
+
+
+//add Maker function
+function addMarker(props){
+  let marker = new google.maps.Marker({
+    position:props.coords,
+    map: map,
+    // // change to flag marker
+    // icon: props.iconImage,
+  });
+
+// check for customicon
+  if(props.iconImage){
+    //set icon image
+    marker.setIcon(props.iconImage);
+  }
+//check content
+if(props.content){
+  let infoWindow = new google.maps.InfoWindow({
+    content:props.content,
+  });
+
+  marker.addListener('click', function(){
+    infoWindow.open(map, marker);
+  });
+  }
+ }
+}
+</script>
+
+<script async defer
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRiKYA8B6vUsvlgJk4YO3HiHVrjhrW1oY&callback=initMap">
+
+</script>
+
+</body>
+</html>

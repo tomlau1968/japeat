@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>My Geocode App</title>
+  </head>
+  <body>
+    <div class='container'>
+      <div id="formatted-address"></div>
+      <div id="address-components"></div>
+
+      </address>
+  </div>
+<script>
+//call Geocode
+geocode();
+  function geocode(){
+    let location = '22 Main St Boston MA';
+    axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
+        params:{
+          address:location,
+          key:'AIzaSyDYQi81PwAV_Sfw2mVJ-JqKkJBM4sEi8f4'
+        }
+    })
+    .then(function(response){
+      // log full response
+      console.log(response);
+
+    //formatted address... compair the same formatted with api
+    let formattedAddress = (response.data.results[0].formatted_address);
+    let formattedAddressOutput = `
+    <ul class="list-group">
+      <li class="list-group-item">${formattedAddress}</li>
+      </ul>
+    `;
+
+    // address components
+    let addresComponents = response.data.results[0].address_components;
+    let addresComponentsOutput = '<ul class="list-group">';
+    for (let i = 0; i < addressComponents.length; i++){
+      addresComponentsOutput += `<li class = "list-group-item"><strong>${addresComponents[i].types[0]}</strong>: ${addresComponents[i].long_name}</li>
+      `;
+    }
+
+    addresComponentsOutput += '</ul>';
+
+
+    //output to app
+    document.getElementById('formatted-address').innerHTML = formattedAddressOutput;
+    document.getElementById('addres-components').innerHTML = addressComponentsOutput;
+    })
+    .catch(function(error){
+      console.log(error);
+    });
+  }
+</script>
+
+
+  </body>
+</html>
