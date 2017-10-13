@@ -21,12 +21,12 @@ const fetchRestaurants = function (lat, lon) {
      data: {
         lat: lat,
         lon: lon,
-        cuisines: '60', // Japanese
+        cuisines: '60',
+
      },
-     processData: true, //data is an object => tells jQuery to construct URL params from it
+     processData: true, //data is an object => tells jQuery to construct URL
    })
 }
-
 
 
 let query = '';
@@ -115,6 +115,5 @@ $(document).ready(function() {
         $sushiShall.css('background-position-x', -scrollTop * 0.03);
 
         $sushiInner.css('background-position-x', scrollTop * 0.25);
-
       });
   });
